@@ -1,0 +1,156 @@
+body{height: 100vh; width: 100%; overflow: hidden;}
+*{box-sizing: border-box;}
+.headerbg{width: 100%;
+  position: absolute;
+  /* border: 1px solid #000; */
+  background: #fff;
+  padding: 15px;
+   height: 90px;z-index: 999;}
+/* .wrap{min-width: 100%; min-height: 100%} */
+
+header{height: 100%;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: space-between;
+}
+nav h2{font-size: 38px;}
+nav ul{display: none;}
+header h1{background-image: url(/Dokdo/Dokdo/images/logo_m.png);
+  width: 60px;height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;}
+  .search{display: none;}
+
+/* 메뉴바------------------------------------------------ */
+
+.menu_cont {
+  display: inline-block;
+  cursor: pointer;
+  margin: -2px 5px 0 0; 
+}
+
+.menu_bar1, .menu_bar2, .menu_bar3 {
+  width: 50px;
+  height: 8px;
+  background-color: #333;
+  margin: 10px 0;
+  transition: 0.4s;
+}
+
+.change .menu_bar1 {
+  transform: rotate(-45deg) translate(-12px, 10px);
+}
+
+.change .menu_bar2 {opacity: 0;}
+
+.change .menu_bar3 {
+  transform: rotate(45deg) translate(-14px, -14px);
+}
+/* .box{width: 100px; height: 100px;
+  margin-left: -100px;
+  translate: 1s ;
+background: #000;}
+.box.on{margin-left :0px;} */
+
+/* 메뉴바-------------------------------------------------- */
+#number_1{background: yellow;
+  position: relative;
+  width: 100%;
+height: 100vh;
+min-height: 980px;
+border: 1px solid #000;}
+
+ul.sect1_text{display: none;}
+ul.sect1_btn{position: absolute;
+display: flex;
+flex-direction: column;
+/* border: 1px solid red; */
+height: 90%;
+z-index: 9;}
+ul.sect1_btn li{text-align: center;}
+.mini_btn{position: absolute;
+  bottom: 115px; right: 0;
+  z-index: 9;
+  /* border: 1px solid red;  */
+  display: flex;
+
+justify-content: space-between;}
+ .mini_btn a{display: block; background: rgba(0, 0, 0, 0.9); padding: 20px;}
+ .mini_textbox{position: relative;}
+.mini_textbox h2{
+  margin: 30px 0 10px 30px ;
+  font-size: 42px; text-align: left;
+line-height: 50px;}
+.mini_textbox p{
+  /* border: 1px solid #000; */
+  text-align: left;
+  margin: 0 0 10px 40px;
+  font-size: 20px;}
+
+
+
+  @media only screen and (min-width: 481px) {
+
+    #number_1{padding-top: 0px;}
+    .bg{min-width: 100%; min-height: 100%;}
+
+    ul.sect1_text{display: none;}
+  }
+  @media only screen and (min-width: 1024px) {
+
+    .headerbg{width: 90px;height: 100%;}
+    header{width: 100%; height: 100%;}
+    header{flex-direction: column;}
+    nav ul{display: flex;}
+    nav h2{display: none;}
+    .menu_cont{display: none;}
+    .search{display: block;}
+
+
+    .sect1_titbox{
+      position: absolute;
+      /* border: 1px solid red; */
+      top: 150px;
+      left: 150px;
+    }
+    /* .sect1_titbox h2{font-size: 55px; color: white;}
+    .sect1_titbox p.subtit{font-size: 40px; color: yellow;
+    margin-top: -10px;}
+    .sect1_titbox p.texts{font-size: 30px; color: white; margin-top: 20px;} */
+
+
+    ul.sect1_btn{position: absolute;top: 0;right: 0;
+      width: 34%;
+      display: flex;flex-direction: column;
+      /* border: 1px solid red; */
+    }
+      /* ul.sect1_btn li{text-align: center;
+        /* border: 1px solid red; */
+      } 
+
+
+      ul.sect1_btn li a{color: white; font-size: 25px;}
+      ul.sect1_btn li>a img{width: auto;margin-bottom: 10px;}
+
+
+      .mini_minislide{height: 60vh; min-width: 100%; background: red;}
+      
+      .mini_slidecontainer{width: 100%; height: 60vh;position: relative;
+      border: 5px solid #000000;}
+      .mini_slidewarp{width: 100%; height: 100%;}
+      .mini_slide{position: absolute;display: none;translate: 2s;}
+      .mini_slide.on{display: block;}
+      .mini_slide img{width: 100%;}
+      .mini_textbox{background: #fff;width: 100%;}
+
+
+      .dragonluckey{width: 100%; height: 55%;
+      border: 7px solid red;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(/Dokdo/Dokdo/images/용복이.png);}
+    }
+  
+
