@@ -13,7 +13,7 @@ html #number_2 {
 }
 
 #number_2 .grid {
-    background: #f5f5f5;
+    background: rgba(0, 0, 0, .5);
     width: 100%;
     margin: auto;
 }
@@ -38,7 +38,7 @@ html #number_2 {
 }
 
 #number_2 .grid-item:hover {
-    border: .5px solid #333
+    border: .5px solid #6ac071
 }
 
 #number_2 .grid-item img {
@@ -64,12 +64,12 @@ html #number_2 {
 #number_2 .nav-2 li {
     width: 50%;
     float: left;
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
     border: 1px solid navy;
     padding: 10px;
-    color: navy;
+    color: #333;
 }
 
 #number_2 img {
@@ -91,11 +91,12 @@ html #number_2 {
 
 #number_2 .title-2 h2 {
     margin: 10px;
-    color: navy;
+    color: #00bce4;
+    font-size: 25px;
 }
 
 #number_2 p {
-    color: #444;
+    color: #fff;
 }
 
 #number_2 .on {
@@ -104,11 +105,13 @@ html #number_2 {
 
 #number_2 h3 {
     margin: 10px;
+    color: #fff;
+    font-size: 20px;
 }
 
 #number_2 .grid-item p {
     padding: 5px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 
@@ -124,12 +127,12 @@ html #number_2 {
 
     #number_2 .nav-2 li {
         width: 8.5%;
-        border: 1px solid #fff;
+        border: 1px solid #051f36;
         margin: 11.3px;
     }
 
     #number_2 .grid {
-        background: #f5f5f5;
+        background: rgba(0, 0, 0, .5);
         width: 80%;
     }
 }

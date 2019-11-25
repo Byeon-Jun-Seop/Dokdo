@@ -68,7 +68,7 @@ border: 1px solid #000;}
   position: absolute;
 left: 0;
 top: 0;
-background: rgba(0, 0, 0, .5);
+background: rgba(0, 0, 0, .4);
 height: 100%;
 width: 100%;}
 .sect1_content{width : 85%; margin: auto;}
