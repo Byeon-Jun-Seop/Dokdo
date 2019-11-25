@@ -146,14 +146,16 @@ cursor: pointer; font-size: 1.2em;}
   height: 100px;
 }
 
-#number_5 .bannerwrap { 
+#number_5 ul.bannerwrap { 
   margin-top: 15px;
   position: relative;
+  height: 100px;
   
 }
+#number_5 .bannerwrap li{float: left;}
 
 .footerbottom{position: absolute; top: 200px; width: 100%;}
-#number_5 .bannerwrap li{float: left;}
+
 #number_5 .footer {width: 100%; height: 400px; position: relative; top: 0;
 margin-top: 70px; }
 #number_5 .footer img{float: left;}

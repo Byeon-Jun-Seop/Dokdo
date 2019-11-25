@@ -6,111 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sec5.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <title>독도</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/js/jquery.mCustomScrollbar.js"></script>
-
-    <script>
-        $(function () {
-
-			$('.list li a').click(function(e){
-				 e.preventDefault()
-				$('.list li a').removeClass('on')
-				$(this).addClass('on')
-				//a 값을 가져오다 (get하겠다)
-				//img는 클릭한  a의  이미지값
-					var img=$(this).attr('href')   //this는 클릭한값
-					console.log(img) //값을 학인할때(검산)
- 				//갑을 지정하겠다. (set하겠다)
-
-				$('.scene img'). attr({'src':img})
-			})
-
-
-
-
-
-
-            var len = $('.banner li').length
-            var wid = $('.banner li').outerWidth()
-            console.log(len, wid)
-            var totwid = len * wid
-            $('.bannerwrap').css({
-                'width': totwid
-            })
-            var timer = 0
-            var mleft = -210
-            timer = setInterval(move, 20)
-
-            function move() {
-                mleft -= 2
-                $('.bannerwrap').css({
-                    'left': mleft
-                })
-
-                if (mleft == -212) {
-                    $('.bannerwrap li').eq(0).appendTo('.bannerwrap')
-
-                } else if (mleft < -420) {
-                    mleft = -210
-                }
-            }
-            $('.bannerwrap').mouseenter(function () {
-                clearInterval(timer)
-            })
-
-            $('.bannerwrap').mouseleave(function () {
-                timer = setInterval(move, 20)
-            })
-
-            $(".scroll").mCustomScrollbar({
-                theme: "dark"
-            })
-
-
-
-
-            var w = $('.slide').width()
-   	 
-            $('a.next').click(function (e) {
-                e.preventDefault()
-                $('.slidewrap').stop().animate({
-                        'margin-left': -w * 2
-                    },
-
-                    500,
-                    function () {
-                        $('.slide').first().appendTo('.slidewrap');
-                        $('.slidewrap').css({
-                            'margin-left': -w
-                        })
-                    })
-            })
-
-            $('a.prev').click(function (e) {
-                e.preventDefault()
-                $('.slidewrap').stop().animate({
-                        'margin-left': 0
-                    },
-                    500,
-                    function () {
-                        $('.slide').last().prependTo('.slidewrap');
-                        $('.slidewrap').css({
-                            'margin-left': -w
-                        })
-                    })
-            })
-
-
-
-
-
-
-        })
-    </script>
+    <script src="/js/sec5.js"></script>
 </head>
 
 <body>
@@ -119,15 +21,9 @@
     <section id="number_2"></section>
     <section id="number_3"></section>
     <section id="number_4"></section>
-    <section id="number_5"></section>
-    </div>
     <section id="number_5">
 
-        <div class="search">
 
-
-        </div>
-        <!--search-->
         <div class="content">
             <div class="content_top">
                 <div class="news">
@@ -141,15 +37,15 @@
 
                             <div class="scenewrap">
                                 <div class="scene">
-                                   <img src="images/pic_pds_book.png" alt="">
+                                    <img src="images/pic_pds_book.png" alt="">
                                 </div>
                                 <ul class="list">
                                     <li class="on"><a href="images/pic_pds_book.png">한국의 아름다운 섬 독도 - 팸플릿</a></li>
                                     <li><a href="images/pic_pds_book2.png">한국의 아름다운 섬 독도 - 리플릿</a></li>
                                     <li><a href="images/pic_pds_book3.png">한국의 아름다운 섬 독도 - 플라이어</a></li>
-                                </ul> 
+                                </ul>
                                 <input class="button" type="button" value="다운로드">
-                         </div>
+                            </div>
 
 
 
@@ -207,13 +103,8 @@
                                         <p>독도박물관-남해유배문학관 공동기획전 개최</p>
                                         <p>18.04.09</p>
                                     </a></li>
-
-
                             </ul>
-
                         </div>
-
-
                     </div>
                     <!--news_content-->
                 </div>
@@ -221,7 +112,10 @@
                 <div class="sns">
                     <h3>SNS</h3>
                     <div class="facebook">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%EB%8F%85%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80-2080280788690172&amp;tabs=timeline&amp;width=502&amp;height=600&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=263723807629900" width="502" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%EB%8F%85%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80-2080280788690172&amp;tabs=timeline&amp;width=502&amp;height=600&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=263723807629900"
+                            width="502" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
                     <ul class="snsnav">
                         <li><a href="#"><img src="images/ico_sns_facebook.png" alt=""></a></li>
@@ -229,46 +123,74 @@
                         <li><a href="#"><img src="images/ico_sns_naver.png" alt=""></a></li>
                         <li><a href="#"><img src="images/ico_sns_twitter.png" alt=""></a></li>
                     </ul>
-
                 </div>
                 <!--sns-->
             </div>
             <!--content-_top-->
             <div class="video">
                 <h3 id="h3">독도 홍보영상</h3>
-              <div class="slidecontainer">  
-                  <div class="slidewrap">
+                <div class="slidecontainer">
+                    <div class="slidewrap">
                         <div class="slide">
-                                <iframe width="1252" height="704" src="https://www.youtube.com/embed/7Ido7y1V0dA?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                      <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/muB4_LNZ2Rk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                      <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/LssY5O5cONU?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/PSsbAo1Ub-c?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/DpPcowIxKFQ?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/pInIn3obIBw?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/ROFiG21WyCY?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/1hM7JVBC4bg?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                            <iframe width="1252" height="704"
+                                src="https://www.youtube.com/embed/7Ido7y1V0dA?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="slide">
+                            <iframe width="1252" height="704" src="https://www.youtube.com/embed/muB4_LNZ2Rk"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="slide">
+                            <iframe width="1252" height="704"
+                                src="https://www.youtube.com/embed/LssY5O5cONU?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="slide">
+                            <iframe width="1252" height="704"
+                                src="https://www.youtube.com/embed/PSsbAo1Ub-c?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="slide">
+                            <iframe width="1252" height="704"
+                                src="https://www.youtube.com/embed/DpPcowIxKFQ?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="slide">
+                            <iframe width="1252" height="704"
+                                src="https://www.youtube.com/embed/pInIn3obIBw?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="slide">
+                            <iframe width="1252" height="704"
+                                src="https://www.youtube.com/embed/ROFiG21WyCY?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="slide">
+                            <iframe width="1252" height="704"
+                                src="https://www.youtube.com/embed/1hM7JVBC4bg?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
 
-                  </div>
-                  <a href="#" class="prev"><img src="/images/slick_arrow_prev.png" alt=""></a>
-                  <a href="#" class="next"><img src="/images/slick_arrow_next.png" alt=""></a>
-              </div>
-                
-
+                    </div>
+                    <a href="#" class="prev"><img src="/images/slick_arrow_prev.png" alt=""></a>
+                    <a href="#" class="next"><img src="/images/slick_arrow_next.png" alt=""></a>
+                </div>
             </div>
             <!--video-->
         </div>
@@ -297,13 +219,13 @@
                 </ul>
             </div>
             <div class="footerbottom">
-            <img src="images/logob_dokdomuseum.gif" alt="">
-            <div class="addres">
-                <p>[40225] 경상북도 울릉군 울릉읍 약수터길 90-17 Tel : (054)790-6432~3</p>
-                <p>독도아카데미 교육 문의 : (054)790-6596~7 Fax : (054)790-6599 E-mail : dokdomuseum1@korea.kr</p>
-                <p>Copyright(C)DOKDO MUSEUM. All rights reserved.</p>
+                <img src="images/logob_dokdomuseum.gif" alt="">
+                <div class="addres">
+                    <p>[40225] 경상북도 울릉군 울릉읍 약수터길 90-17 Tel : (054)790-6432~3</p>
+                    <p>독도아카데미 교육 문의 : (054)790-6596~7 Fax : (054)790-6599 E-mail : dokdomuseum1@korea.kr</p>
+                    <p>Copyright(C)DOKDO MUSEUM. All rights reserved.</p>
+                </div>
             </div>
-</div>
         </div>
         <!--footer-->
 
