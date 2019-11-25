@@ -1,0 +1,173 @@
+body{ font-family: 'Noto Sans KR', sans-serif; 
+}
+
+.headerbg{width: 100%;position: fixed; border: 1px solid #000; z-index: 3;}
+header{display: flex; justify-content: space-between; height: 100%;}
+nav ul{display: none;}
+header h1{
+  /* background-image: url(/Dokdo/Dokdo/images/logo_m.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;  */
+  width: 50px;
+height: 50px;
+padding: 9px;
+background: #333;
+
+border-radius: 50%;}
+header h1 img{margin : 5px 1px;}
+.menu_cont {
+  display: inline-block;
+  cursor: pointer;
+  margin: -2px 5px 0 0; 
+}
+header h2{ font-size: 35px;
+margin: 10px;
+margin-left: 40px;}
+
+/* 메뉴바-------------------------------------------------- */
+.menu_cont{margin-top: 5px;}
+.menu_bar1, .menu_bar2, .menu_bar3 {
+  width: 50px;
+  height: 3px;
+  background-color: #333;
+  margin: 14px 0;
+  transition: 0.4s;
+}
+
+.change .menu_bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .menu_bar2 {opacity: 0;}
+
+.change .menu_bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+/* 메뉴바-------------------------------------------------- */
+
+/* 컨텐츠---------------------------------------------------- */
+
+.sect1_wrap{width: 100%; height: 600px; padding-top: 100px;
+  position: relative;
+border: 1px solid #000;}
+.sect1_bg{
+  position: fixed; top: 0;left: 0;
+  z-index: -8;
+  width: 100%; height: 100%;
+  background: url(/images/bg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;}
+
+  .sect1_bg::after{content: "";
+  position: absolute;
+left: 0;
+top: 0;
+background: rgba(0, 0, 0, .5);
+height: 100%;
+width: 100%;}
+.sect1_content{width : 85%; margin: auto;}
+.sect1_content .grid {
+  /* background: #DDD; */
+  width: 100%;
+  height: 700px;
+}
+/* clear fix */
+.sect1_content .grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* ---- .grid-item ---- */
+
+.sect1_content .grid-item {
+  width: 195px; 
+  height: 105px;
+  /* background: red; */
+  padding: 5px 0 0 5px;
+}
+
+.sect1_content .grid-item--width2 { width: 395px; }
+.sect1_content .grid-item--height2 { height: 215px; }
+.sect1_text{background: rgba(0, 0, 0, .3);
+  /* height: calc( 100% - 10px ); */
+  /* width: calc( 100% - 10px ); */
+  width: 100%; height: 100%;
+  border: 1px solid #fff;
+  /* padding: 5px; */
+  color: white;}
+  .sect1_text:hover{background:rgba(0,0,0,.5);}
+.sect1_text{position: relative;}
+.sect1_text h2{position: absolute; top: 10px; left: 10px; font-size: 20px;
+font-weight: 400;}
+.sect1_text p{position: absolute; display: none;}
+.sect1_text img{position: absolute; width: 40px; bottom: 10px; right: 10px;}
+/* 컨텐츠---------------------------------------------------- */
+
+  @media only screen and (min-width: 501px) {
+    body{height: 100vh; width: 100%;}
+    .sect1_wrap{width: 100%; height: 100%;}
+    .sect1_content{margin-top: 50px;}
+    #number_1{height: 100%;}
+    .sect1_content{
+      width: 640px;
+      /* border: 1px solid #000; */
+    }
+    .sect1_content .grid {
+      /* background: #DDD; */
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: space-around;
+    }
+    /* clear fix */
+    .sect1_content .grid:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .sect1_content .grid-item {
+      /* background: chartreuse; */
+      width: 288px;  
+       /*2*/
+      height: 200px;
+      padding: 10px 0 0 10px;
+    }
+    
+    /* .grid-item--width2 { width: 588px;}
+    .grid-item--height2 { height: 410px;} */
+    .padding_ten{padding-top: 10px;}
+    /* .sect1_text h2{font-size: 30px;} */
+    /* .sect1_text img{width: 80px;} */
+  }
+  @media only screen and (min-width: 1024px) {
+    .sect1_content{/* border: 1px solid #000;  */width: 1280px;}
+    #number_1{
+      height: calc(100vh);
+    }
+    /* ---- .grid-item ---- */
+    
+    .sect1_content .grid-item {
+      /* background: chartreuse; */
+      width: 581px;  
+       /*2*/
+      height: 150px;
+      padding: 10px 0 0 10px;
+    }
+    .sect1_content .grid-item--width2 { width: 581px;}
+    .sect1_content .grid-item--height2 { height: 150px;}
+    .sect1_content .grid-item--width3  { width: 581px;}
+    .sect1_content .grid-item--height3 { height: 410px;}
+    .padding_ten{padding-top: 10px;}
+    .sect1_text h2{
+      /* font-size: 35px; */
+       left: 20px;}
+    }
+  
+
