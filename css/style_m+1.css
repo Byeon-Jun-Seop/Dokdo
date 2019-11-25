@@ -1,6 +1,5 @@
 body{ font-family: 'Noto Sans KR', sans-serif; 
 }
-
 .headerbg{width: 100%;position: fixed; border: 1px solid #000; z-index: 3;}
 header{display: flex; justify-content: space-between; height: 100%;}
 nav ul{display: none;}
