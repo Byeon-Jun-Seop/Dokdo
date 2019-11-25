@@ -1,316 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <title>독도</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/js/jquery.mCustomScrollbar.js"></script>
-
-    <script>
-        $(function () {
-
-			$('.list li a').click(function(e){
-				 e.preventDefault()
-				$('.list li a').removeClass('on')
-				$(this).addClass('on')
-				//a 값을 가져오다 (get하겠다)
-				//img는 클릭한  a의  이미지값
-					var img=$(this).attr('href')   //this는 클릭한값
-					console.log(img) //값을 학인할때(검산)
- 				//갑을 지정하겠다. (set하겠다)
-
-				$('.scene img'). attr({'src':img})
-			})
-
-
-
-
-
-
-            var len = $('.banner li').length
-            var wid = $('.banner li').outerWidth()
-            console.log(len, wid)
-            var totwid = len * wid
-            $('.bannerwrap').css({
-                'width': totwid
-            })
-            var timer = 0
-            var mleft = -210
-            timer = setInterval(move, 20)
-
-            function move() {
-                mleft -= 2
-                $('.bannerwrap').css({
-                    'left': mleft
-                })
-
-                if (mleft == -212) {
-                    $('.bannerwrap li').eq(0).appendTo('.bannerwrap')
-
-                } else if (mleft < -420) {
-                    mleft = -210
-                }
-            }
-            $('.bannerwrap').mouseenter(function () {
-                clearInterval(timer)
-            })
-
-            $('.bannerwrap').mouseleave(function () {
-                timer = setInterval(move, 20)
-            })
-
-            $(".scroll").mCustomScrollbar({
-                theme: "dark"
-            })
-
-
-
-
-            var w = $('.slide').width()
-   	 
-            $('a.next').click(function (e) {
-                e.preventDefault()
-                $('.slidewrap').stop().animate({
-                        'margin-left': -w * 2
-                    },
-
-                    500,
-                    function () {
-                        $('.slide').first().appendTo('.slidewrap');
-                        $('.slidewrap').css({
-                            'margin-left': -w
-                        })
-                    })
-            })
-
-            $('a.prev').click(function (e) {
-                e.preventDefault()
-                $('.slidewrap').stop().animate({
-                        'margin-left': 0
-                    },
-                    500,
-                    function () {
-                        $('.slide').last().prependTo('.slidewrap');
-                        $('.slidewrap').css({
-                            'margin-left': -w
-                        })
-                    })
-            })
-
-
-
-
-
-
-        })
-    </script>
 </head>
-
 <body>
-
-    <section id="number_1"></section>
-    <section id="number_2"></section>
-    <section id="number_3"></section>
-    <section id="number_4"></section>
-    <section id="number_5"></section>
-    </div>
-    <section id="number_5">
-
-        <div class="search">
-
-
-        </div>
-        <!--search-->
-        <div class="content">
-            <div class="content_top">
-                <div class="news">
-                    <div class="news_header">
-                        <img src="images/ico_speaker.png" alt="">
-                        <h3>독도 박물관 자료 및 소식</h3>
-                    </div>
-                    <!--news_header-->
-                    <div class="news_content">
-                        <div class="news_content_left">
-
-                            <div class="scenewrap">
-                                <div class="scene">
-                                   <img src="images/pic_pds_book.png" alt="">
-                                </div>
-                                <ul class="list">
-                                    <li class="on"><a href="images/pic_pds_book.png">한국의 아름다운 섬 독도 - 팸플릿</a></li>
-                                    <li><a href="images/pic_pds_book2.png">한국의 아름다운 섬 독도 - 리플릿</a></li>
-                                    <li><a href="images/pic_pds_book3.png">한국의 아름다운 섬 독도 - 플라이어</a></li>
-                                </ul> 
-                                <input class="button" type="button" value="다운로드">
-                         </div>
-
-
-
-
-                            <p>정부의 기본입장, 독도가 우리 영토인 지리적 역사적 근거, 독독에 관한 일문일답 등으로 구성되어 있습니다.</p>
-                            <p>아래에서 본 책자의 PDF 파일을 언어별로 선택하여 다운로드 받아 보실 수 있습니다.</p>
-                        </div>
-                        <div class="news_content_right">
-                            <div class="news_content_right_header">
-                                <h4>알림사항</h4>
-                                <p><a href="#">더보기</a></p>
-                            </div>
-                            <ul class="scroll">
-                                <li><a href="#">
-                                        <p>독도박물관-한글전각미술관 공동기획전</p>
-                                        <p>19.10.08</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>독도박물관-장생포고래박물관 공동기획전</p>
-                                        <p>19.06.21</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>한국YMCA전국연맹의 안용복기념관 후원</p>
-                                        <p>19.04.04</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>2019년도 독도박물관 유물구입 공고</p>
-                                        <p>19.04.04</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>독도박물관 별관 특별전시실 임시 휴관 안내</p>
-                                        <p>19.03.25 </p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>2019년 독도아카데미 교육신청 안내</p>
-                                        <p>19.03.05</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>2019년 독도아카데미 참여업체(음식점,숙박업소) 모집...</p>
-                                        <p>19.02.19</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>2019년 독도아카데미해설사(기간제근로자) 채용 공고...</p>
-                                        <p>19.02.19</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>독도박물관-수원광교박물관 공동기획전 "한국인의 ...</p>
-                                        <p>19.02.18</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>2018년 독도박물관 특별전시회 "한국인의 삶의 기록,...</p>
-                                        <p>18.06.27</p>
-                                    </a></li>
-                                <li><a href="#">
-                                        <p>독도박물관-남해유배문학관 공동기획전 개최</p>
-                                        <p>18.04.09</p>
-                                    </a></li>
-
-
-                            </ul>
-
-                        </div>
-
-
-                    </div>
-                    <!--news_content-->
-                </div>
-                <!--news-->
-                <div class="sns">
-                    <h3>SNS</h3>
-                    <div class="facebook">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%EB%8F%85%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80-2080280788690172&amp;tabs=timeline&amp;width=502&amp;height=600&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=263723807629900" width="502" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    </div>
-                    <ul class="snsnav">
-                        <li><a href="#"><img src="images/ico_sns_facebook.png" alt=""></a></li>
-                        <li><a href="#"><img src="images/ico_sns_kakao.png" alt=""></a></li>
-                        <li><a href="#"><img src="images/ico_sns_naver.png" alt=""></a></li>
-                        <li><a href="#"><img src="images/ico_sns_twitter.png" alt=""></a></li>
-                    </ul>
-
-                </div>
-                <!--sns-->
-            </div>
-            <!--content-_top-->
-            <div class="video">
-                <h3 id="h3">독도 홍보영상</h3>
-              <div class="slidecontainer">  
-                  <div class="slidewrap">
-                        <div class="slide">
-                                <iframe width="1252" height="704" src="https://www.youtube.com/embed/7Ido7y1V0dA?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                      <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/muB4_LNZ2Rk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                      <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/LssY5O5cONU?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/PSsbAo1Ub-c?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/DpPcowIxKFQ?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/pInIn3obIBw?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/ROFiG21WyCY?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="slide">
-                        <iframe width="1252" height="704" src="https://www.youtube.com/embed/1hM7JVBC4bg?list=PLef8XpzyyipcaecTwu-N24bUp0O9iV-DH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-
-                  </div>
-                  <a href="#" class="prev"><img src="/images/slick_arrow_prev.png" alt=""></a>
-                  <a href="#" class="next"><img src="/images/slick_arrow_next.png" alt=""></a>
-              </div>
-                
-
-            </div>
-            <!--video-->
-        </div>
-        <!--content-->
-        <div class="footer">
-            <div class="banner">
-                <ul class="bannerwrap">
-                    <li><img src="images/link_go01.gif" alt=""></li>
-                    <li><img src="images/link_go02.gif" alt=""></li>
-                    <li><img src="images/link_go03.gif" alt=""></li>
-                    <li><img src="images/link_go04.gif" alt=""></li>
-                    <li><img src="images/link_go05.gif" alt=""></li>
-                    <li><img src="images/link_go06.gif" alt=""></li>
-                    <li><img src="images/link_go07.gif" alt=""></li>
-                    <li><img src="images/link_go08.gif" alt=""></li>
-                    <li><img src="images/link_go10.gif" alt=""></li>
-                    <li><img src="images/link_go01.gif" alt=""></li>
-                    <li><img src="images/link_go02.gif" alt=""></li>
-                    <li><img src="images/link_go03.gif" alt=""></li>
-                    <li><img src="images/link_go04.gif" alt=""></li>
-                    <li><img src="images/link_go05.gif" alt=""></li>
-                    <li><img src="images/link_go06.gif" alt=""></li>
-                    <li><img src="images/link_go07.gif" alt=""></li>
-                    <li><img src="images/link_go08.gif" alt=""></li>
-                    <li><img src="images/link_go10.gif" alt=""></li>
+    <div class="headerbg">
+        <header>
+            <h1><img src="images/logo.gif" alt=""></h1>
+            <nav>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                 </ul>
-            </div>
-            <div class="footerbottom">
-            <img src="images/logob_dokdomuseum.gif" alt="">
-            <div class="addres">
-                <p>[40225] 경상북도 울릉군 울릉읍 약수터길 90-17 Tel : (054)790-6432~3</p>
-                <p>독도아카데미 교육 문의 : (054)790-6596~7 Fax : (054)790-6599 E-mail : dokdomuseum1@korea.kr</p>
-                <p>Copyright(C)DOKDO MUSEUM. All rights reserved.</p>
-            </div>
-</div>
+            </nav>
+            <a href="#" class="search"></a>
+        </header>
+    </div>
+        <div class="wrap">
+            <section id="number_1">
+                <div class="slidecontainer">
+                    <div class="slidewrap">
+                        <div class="slide bg1"></div>
+                        <div class="slide bg2"></div>
+                        <div class="slide bg1"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="number_2">
+                <h1>입장완료2222222222222</h1>
+            </section>
+            <section id="number_3"></section>
+            <section id="number_4"></section>
+            <section id="number_5"></section>
         </div>
-        <!--footer-->
-
-
-
-    </section>
-    <!--number_5-->
+        <footer></footer>
 </body>
-
 </html>
