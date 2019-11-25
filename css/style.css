@@ -103,7 +103,6 @@ width: 100%;}
 .sect1_text{position: relative;}
 .sect1_text h2{position: absolute; top: 10px; left: 10px; font-size: 20px;
 font-weight: 400;}
-.sect1_text p{position: absolute; display: none;}
 .sect1_text img{position: absolute; width: 40px; bottom: 10px; right: 10px;}
 /* 컨텐츠---------------------------------------------------- */
 
